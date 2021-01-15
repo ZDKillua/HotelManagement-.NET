@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4821DA9D-4024-424B-B99A-94436D6F8193}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DoAn_QuanLyKhachSan</RootNamespace>
+    <AssemblyName>DoAn_QuanLyKhachSan</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2">
+      <HintPath>C:\Users\killu\Downloads\Guna.UI2_WinForms_v2.0.1.2\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAO\ChucVuDAO.cs" />
+    <Compile Include="DAO\DatPhongDAO.cs" />
+    <Compile Include="DAO\KhachHangDAO.cs" />
+    <Compile Include="DAO\LoaiPhongDAO.cs" />
+    <Compile Include="DAO\NhanVienDAO.cs" />
+    <Compile Include="DAO\PhongDAO.cs" />
+    <Compile Include="DAO\QuanLyDAO.cs" />
+    <Compile Include="DataClasses1.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="POJO\ChucVuPOJO.cs" />
+    <Compile Include="POJO\DatPhongPOJO.cs" />
+    <Compile Include="POJO\KhachHangPOJO.cs" />
+    <Compile Include="POJO\LoaiPhongPOJO.cs" />
+    <Compile Include="POJO\NhanVienPOJO.cs" />
+    <Compile Include="POJO\PhieuDangKyPOJO.cs" />
+    <Compile Include="POJO\PhieuDichVuPOJO.cs" />
+    <Compile Include="POJO\PhongPOJO.cs" />
+    <Compile Include="UI\AlertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AlertForm.Designer.cs">
+      <DependentUpon>AlertForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\EditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\EditForm.Designer.cs">
+      <DependentUpon>EditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ForgotPassForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ForgotPassForm.Designer.cs">
+      <DependentUpon>ForgotPassForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UIDatPhong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UIDatPhong.Designer.cs">
+      <DependentUpon>UIDatPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UIKhachHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UIKhachHang.Designer.cs">
+      <DependentUpon>UIKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UINhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UINhanVien.Designer.cs">
+      <DependentUpon>UINhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UIPhong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UIPhong.Designer.cs">
+      <DependentUpon>UIPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WarningForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\WarningForm.Designer.cs">
+      <DependentUpon>WarningForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\UIDangNhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UIDangNhap.Designer.cs">
+      <DependentUpon>UIDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UIQuanLy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UIQuanLy.Designer.cs">
+      <DependentUpon>UIQuanLy.cs</DependentUpon>
+    </Compile>
+    <None Include="DataClasses1.dbml.layout">
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="UI\AlertForm.resx">
+      <DependentUpon>AlertForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\EditForm.resx">
+      <DependentUpon>EditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ForgotPassForm.resx">
+      <DependentUpon>ForgotPassForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UIDatPhong.resx">
+      <DependentUpon>UIDatPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UIKhachHang.resx">
+      <DependentUpon>UIKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UINhanVien.resx">
+      <DependentUpon>UINhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UIPhong.resx">
+      <DependentUpon>UIPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\WarningForm.resx">
+      <DependentUpon>WarningForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UI\UIDangNhap.resx">
+      <DependentUpon>UIDangNhap.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UIQuanLy.resx">
+      <DependentUpon>UIQuanLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataClasses1.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClasses1.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hotel_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warn%281%29.png" />
+    <None Include="Resources\warn.png" />
+    <None Include="Resources\yes.png" />
+    <None Include="Resources\hufi_logo.png" />
+    <None Include="Resources\hufi_logo1.png" />
+    <None Include="Resources\facebook.png" />
+    <None Include="Resources\twitter.png" />
+    <None Include="Resources\instagram.png" />
+    <None Include="Resources\bell.png" />
+    <None Include="Resources\power.png" />
+    <None Include="Resources\power%281%29.png" />
+    <None Include="Resources\settings.png" />
+    <None Include="Resources\notification.png" />
+    <None Include="Resources\settings%281%29.png" />
+    <None Include="Resources\login_icon.png" />
+    <None Include="Resources\avatar.png" />
+    <None Include="Resources\avatar1.png" />
+    <None Include="Resources\avatar2.png" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\padlock.png" />
+    <None Include="Resources\no.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\ok.png" />
+    <None Include="Resources\add_16px.png" />
+    <None Include="Resources\add_16px1.png" />
+    <None Include="Resources\add_16px2.png" />
+    <None Include="Resources\add_black_16px.png" />
+    <None Include="Resources\add_32px.png" />
+    <None Include="Resources\remove_32px.png" />
+    <None Include="Resources\edit_32px.png" />
+    <None Include="Resources\remove_new_32px.png" />
+    <None Include="Resources\logo.png" />
+    <None Include="Resources\logo%281%29.png" />
+    <Content Include="Resources\user_login_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
